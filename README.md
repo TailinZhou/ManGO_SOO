@@ -19,16 +19,16 @@ git clone https://github.com/TailinZhou/ManGO_SOO.git
 cd ManGO_SOO
 ```
 
-Update your conda environment to include the necessary libraries. if sudo:
+Update your conda environment to include the necessary libraries. If you have sudo:
 ```
 sudo apt install libosmesa6-dev libgl1-mesa-glx libglfw3
 ```
-if you are not using sudo, you can use the following command to add the necessary libraries (some errors may occur):
+If you are not using sudo, you can use the following command to add the necessary libraries:
 ```
 conda install -c conda-forge mesalib glew glfw
 ```
 
-Next, create a `conda` environment from the `environment.yml` file to setup the environment and install the relevant dependencies.
+Next, create a `conda` environment from the `environment.yml` file to set up the environment and install the relevant dependencies.
 
 ```
 conda env create -f environment.yml
@@ -36,14 +36,14 @@ conda activate mango4soo
 pip install -r mango_requirements.txt
 ```
 
-For people who installed these libraries to the non-base conda environment and have to batch script on a cluster machine, you might want to add this to your .bashrc. Note how CPATH comes after conda activate
+For people who installed these libraries in a non-base conda environment and have to batch script on a cluster machine, you might want to add this to your .bashrc. Note how CPATH comes after conda activate
 ```
 # export CPATH=$CONDA_PREFIX/include
 # conda activate mango4soo
 # export CPATH=$CONDA_PREFIX/include
 ```
 
-For mujoco200，if you already have mujoco200 installed, you can skip this step.
+For mujoco200, if you already have mujoco200 installed, you can skip this step.
 
 ```
 mkdir ~/.mujoco
@@ -60,25 +60,27 @@ cp mjkey.txt ~/.mujoco
 cp mjkey.txt ~/.mujoco/mujoco200/bin
 ```
 
-set the `LD_LIBRARY_PATH` environment variable to point to the `mujoco200/bin` directory.
+Set the `LD_LIBRARY_PATH` environment variable to point to the `mujoco200/bin` directory.
 ```
 conda env config vars set -n mango4soo LD_LIBRARY_PATH="$LD_LIBRARY_PATH: {$HOME}/.mujoco/mujoco200/bin"
 ```
-please replace `$HOME` with your home directory path (you can use echo $HOME to get your home directory path).
+Please replace `$HOME` with your home directory path (you can use echo $HOME to get your home directory path).
  
 
-Then, since we may use minmax normalization for training ManGO, instead of zero_unit_variance normalization in the original benchmark setting.  Specifically, zero_unit_variance for superconduct, min_max for other tasks, due to a bug of overestimating evaluation in superconduct if using minmax normalization. Please replace our `design_bench` directory with the `design_bench` package in the mango4soo environment, please replace the following `~/your_anaconda3_path` as your anaconda path.
+Then, since we may use minmax normalization for training ManGO, instead of zero_unit_variance normalization in the original benchmark setting. 
+Specifically, zero_unit_variance for superconduct, min_max for other tasks due to a bug of overestimating evaluation in superconduct if using minmax normalization.
 
 ```
 TARGET_DIR="~/your_anaconda3_path/envs/mango4soo/lib/python3.8/site-packages/design_bench"
- ls $TARGET_DIR   
- SOURCE_DIR="~/ManGO_SOO/design_bench"
+ls $TARGET_DIR   
+SOURCE_DIR="~/ManGO_SOO/design_bench"
 ln -s "$SOURCE_DIR" "$TARGET_DIR"  
 ```
+Please replace our `design_bench` directory with the `design_bench` package in the mango4soo environment, and replace the following `~/your_anaconda3_path` with your anaconda path.
 
- 
 
-Next, please also follow the directions [here]([https://github.com/rail-berkeley/design-bench/issues/1](https://drive.google.com/drive/folders/1tmbFImzhkivZUjHeh434D7V7mrxTBu1H)) to download the `design_bench_data.zip` file and unzip it to the `~/your_anaconda3_path/envs/mango4soo/lib/python3.8/site-packages/design_bench_data` package directory, and also copy the [`smiles_vocab.txt`](./data/molecules/smiles_vocab.txt) file to the `design_bench_data` package directory:
+
+Next, please also download the `design_bench_data.zip` file  [here](https://drive.google.com/drive/folders/1tmbFImzhkivZUjHeh434D7V7mrxTBu1H)  and unzip it to the `~/your_anaconda3_path/envs/mango4soo/lib/python3.8/site-packages/design_bench_data` package directory, and also copy the [`smiles_vocab.txt`](./data/molecules/smiles_vocab.txt) file to the `design_bench_data` package directory:
 
 ```
 cd ~/ManGO_SOO
@@ -89,13 +91,13 @@ cp -p data/molecules/smiles_vocab.txt  ~/your_anaconda3_path/envs/mango4soo/lib/
 
 ### Running
 After successful installation, you can run our jupyter scripts in the `mango_jupyter_scripts` directory, where we provide our pretrained models and the corresponding evaluation results. 
-Please use your home directory to replace our directory in some cells of the original Jupyter scripts before you start.
+
+Note that please use your home directory to replace our directory in some cells of the original Jupyter scripts before you start.
 
 
-## Contact
+## Contact and Citation
 Questions and comments are welcome. Suggestions can be submitted through Github issues. 
 
-## Citation
 @inproceedings{mango,
     author = {Tailin Zhou, Zhilin Chen, Wenlong Lyv, Zhitang Chen, Danny H.K. Tsang, and Jun Zhang.},
     title = {Learning Design-Score Manifold to Guide Diffusion Models for Offline Optimization},
@@ -103,7 +105,4 @@ Questions and comments are welcome. Suggestions can be submitted through Github 
     year = {2025},
 }
 
-## License
-
-This repository is MIT licensed (see [LICENSE](LICENSE)).
 
