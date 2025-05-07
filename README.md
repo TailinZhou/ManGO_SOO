@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Learning Design-Score Manifold to Guide Diffusion Models for Offline Optimization
 
 Optimizing complex systems—from discovering therapeutic drugs to designing high-performance materials—remains a fundamental challenge across science and engineering, as the underlying rules are often unknown and costly to evaluate. 
@@ -119,7 +119,4 @@ Questions and comments are welcome. Suggestions can be submitted through Github 
 ## License
 
 This repository is MIT licensed (see [LICENSE](LICENSE)).
-=======
-# ManGO_SOO
-Codes for ManGO on offline SOO tasks via design benchmark
->>>>>>> 12eeb0f022e09171357231b6cd171a7b46ed6a8d
+
