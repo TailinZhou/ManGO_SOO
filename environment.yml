@@ -1,9 +1,9 @@
 name: mango4soo
 channels:
-  # - defaults
-  # - conda-forge
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2
+  - defaults
+  - conda-forge
+  # - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
+  # - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2
 dependencies:
   - _libgcc_mutex=0.1
   - _openmp_mutex=4.5
