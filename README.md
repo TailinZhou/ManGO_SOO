@@ -28,7 +28,7 @@ if you are not using sudo, you can use the following command to add the necessar
 conda install -c conda-forge mesalib glew glfw
 ```
 
-Next, create a [`conda` environment](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) from the `environment.yml` file to setup the environment and install the relevant dependencies.
+Next, create a `conda` environment from the `environment.yml` file to setup the environment and install the relevant dependencies.
 
 ```
 conda env create -f environment.yml
@@ -78,7 +78,7 @@ ln -s "$SOURCE_DIR" "$TARGET_DIR"
 
  
 
-Next, please also follow the directions [here](https://github.com/rail-berkeley/design-bench/issues/1) to download the `design-bench`-associated datasets and save them to the `~/your_anaconda3_path/envs/mango4soo/lib/python3.8/site-packages/design_bench_data` package directory, and also copy the [`smiles_vocab.txt`](./data/molecules/smiles_vocab.txt) file to the `design_bench_data` package directory:
+Next, please also follow the directions [here]([https://github.com/rail-berkeley/design-bench/issues/1](https://drive.google.com/drive/folders/1tmbFImzhkivZUjHeh434D7V7mrxTBu1H)) to download the `design_bench_data.zip` file and unzip it to the `~/your_anaconda3_path/envs/mango4soo/lib/python3.8/site-packages/design_bench_data` package directory, and also copy the [`smiles_vocab.txt`](./data/molecules/smiles_vocab.txt) file to the `design_bench_data` package directory:
 
 ```
 cd ~/ManGO_SOO
@@ -88,7 +88,8 @@ cp -p data/molecules/smiles_vocab.txt  ~/your_anaconda3_path/envs/mango4soo/lib/
 
 
 ### Running
-After successful installation, you can run our jupyter scripts in the `mango_jupyter_scripts` directory, where we provide our pretrained models and the corresponding evaluation results.
+After successful installation, you can run our jupyter scripts in the `mango_jupyter_scripts` directory, where we provide our pretrained models and the corresponding evaluation results. 
+Please use your home directory to replace our directory in some cells of the original Jupyter scripts before you start.
 
 
 ## Contact
