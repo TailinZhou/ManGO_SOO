@@ -75,15 +75,7 @@ TARGET_DIR="~/your_anaconda3_path/envs/mango4soo/lib/python3.8/site-packages/des
  SOURCE_DIR="~/ManGO_SOO/design_bench"
 ln -s "$SOURCE_DIR" "$TARGET_DIR"  
 ```
-<!-- cp -r "$SOURCE_DIR" "$TARGET_DIR" 直接复制覆盖​ -->
 
-e.g.,
-```
-TARGET_DIR="/home/tzhouaq/anaconda3/envs/mango4soo/lib/python3.8/site-packages/design_bench"
-ls $TARGET_DIR
-SOURCE_DIR="~/ManGO_SOO/design_bench"
-ln -s "$SOURCE_DIR" "$TARGET_DIR"  
-```
  
 
 Next, please also follow the directions [here](https://github.com/rail-berkeley/design-bench/issues/1) to download the `design-bench`-associated datasets and save them to the `~/your_anaconda3_path/envs/mango4soo/lib/python3.8/site-packages/design_bench_data` package directory, and also copy the [`smiles_vocab.txt`](./data/molecules/smiles_vocab.txt) file to the `design_bench_data` package directory:
@@ -94,12 +86,6 @@ mkdir -p "~/your_anaconda3_path/envs/mango4soo/lib/python3.8/site-packages/desig
 cp -p data/molecules/smiles_vocab.txt  ~/your_anaconda3_path/envs/mango4soo/lib/python3.8/site-packages/design_bench_data/
 ```
 
-```
-e.g.,:
-cd ~/ManGO_SOO
-mkdir -p "/home/tzhouaq/anaconda3/envs/mango4soo/lib/python3.8/site-packages/design_bench_data/"
-cp -p data/molecules/smiles_vocab.txt /home/tzhouaq/anaconda3/envs/mango4soo/lib/python3.8/site-packages/design_bench_data/
-```
 
 ### Running
 After successful installation, you can run our jupyter scripts in the `mango_jupyter_scripts` directory, where we provide our pretrained models and the corresponding evaluation results.
