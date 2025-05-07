@@ -1,6 +1,7 @@
 
 # Learning Design-Score Manifold to Guide Diffusion Models for Offline Optimization
 
+## Abstract
 Optimizing complex systems—from discovering therapeutic drugs to designing high-performance materials—remains a fundamental challenge across science and engineering, as the underlying rules are often unknown and costly to evaluate. 
 Offline optimization aims to optimize designs for target scores using pre-collected datasets without system interaction.
 However, conventional approaches may fail beyond training data, predicting inaccurate scores and generating inferior designs. 
