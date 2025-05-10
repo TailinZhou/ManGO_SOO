@@ -1,6 +1,8 @@
 
 # Learning Design-Score Manifold to Guide Diffusion Models for Offline Optimization
 
+(This is the Code repository of ManGO for offline multi-objective optimization(MOO).)
+
 ## Abstract
 Optimizing complex systems—from discovering therapeutic drugs to designing high-performance materials—remains a fundamental challenge across science and engineering, as the underlying rules are often unknown and costly to evaluate. 
 Offline optimization aims to optimize designs for target scores using pre-collected datasets without system interaction.
@@ -90,7 +92,7 @@ cp -p data/molecules/smiles_vocab.txt  ~/your_anaconda3_path/envs/mango4soo/lib/
 ```
 
 
-### Running
+### Run
 After successful installation, you can run our jupyter scripts in the `mango_jupyter_scripts` directory, where we provide our pretrained models and the corresponding evaluation results. 
 
 Note that please use your home directory to replace our directory in some cells of the original Jupyter scripts before you start.
