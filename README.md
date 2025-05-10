@@ -1,7 +1,7 @@
 
 # Learning Design-Score Manifold to Guide Diffusion Models for Offline Optimization
 
-(This is the Code repository of ManGO for offline multi-objective optimization(MOO).)
+(This is the Code repository of ManGO for offline single-objective optimization(SOO).)
 
 ## Abstract
 Optimizing complex systems—from discovering therapeutic drugs to designing high-performance materials—remains a fundamental challenge across science and engineering, as the underlying rules are often unknown and costly to evaluate. 
